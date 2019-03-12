@@ -1,0 +1,53 @@
+.toast-it {
+  background-color: #F9E764;
+  color: black;
+  padding: 3px 20px;
+  /* border-radius: 20px; */
+  border: 1px solid saddlebrown;
+  text-align: center;
+  position: fixed;
+  font-size: 14px;
+  /* center horizontally */
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+  transform: translate(-50%, -80%);
+  -webkit-animation-name: TOAST-APPEAR;
+  animation-name: TOAST-APPEAR;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+@-webkit-keyframes TOAST-APPEAR {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    top: 70%;
+  }
+  100% {
+    opacity: 0;
+    top: 20%;
+  }
+}
+@keyframes TOAST-APPEAR {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    top: 70%;
+  }
+  100% {
+    opacity: 0;
+    top: 20%;
+  }
+}

@@ -1,0 +1,158 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+#root{
+	height: 100%;
+}
+#header{
+	width: 100%;
+}
+.App-header {
+	background-color: rgba(97, 218, 251,1);
+	height: 88px;
+	padding: 0 20px;
+	color: white;
+  }
+.App-title{
+	margin:0;
+	line-height: 88px;
+	font-size: 1.5em;
+	width:200px;
+	float: left;
+	/* background-color: aqua; */
+}
+ 
+#sidebar{
+	width:186px;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #001529;
+    border-right: 1px solid #e9e9e9;
+}
+#content,#rightContent{
+	box-sizing: border-box;
+    padding: 10px 20px 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+	overflow-y: auto;
+}
+#content{
+	top: 0;
+	left: 185px;
+	padding: 0;
+}
+#rightContent{
+	top:90px;
+	left:0;
+	padding-top: 0;
+}
+.fullBlock{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;left:0;
+	background-color: #B4DEF7;
+}
+.App-logo {
+	display: block;
+    margin: 20px auto;
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
+  }
+  @keyframes App-logo-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+  }
+/* form */
+.tdMiddle{
+	vertical-align: middle !important;
+}
+.tdMiddleRight{
+	vertical-align: middle !important;;
+  text-align: right;
+}
+.tdMiddleCenter{
+	vertical-align: middle !important;;
+  text-align: center;
+}
+
+.fadeInDown{
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+.loading{
+	-webkit-animation-name: loading;
+	animation-name: loading;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.alertHide{
+	display: none;
+}
+.alertOut{
+	display: block;
+	-webkit-animation-name: alertOut;
+	animation-name: alertOut;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.lineBlock{
+	display: inline-block;
+}
+@keyframes fadeInDown{
+	0% {
+			opacity: 0;
+			-webkit-transform: translate3d(0,-100%,0);
+			transform: translate3d(0,-100%,0);
+	}
+	100% {
+			opacity: 1;
+			-webkit-transform: none;
+			transform: none;
+	}
+}
+@keyframes loading{
+	from { 
+		background: #B4DEF7;
+		opacity: 1;
+		z-index: 999;
+	}
+	to {
+		background: blue;
+		opacity: 0;
+		z-index: -1;
+	}
+}
+@keyframes alertOut{
+	0% {  
+		opacity: 0; 
+	}
+	10% {
+		opacity: 1; 
+	}
+	90% {
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0; 
+	}
+}
