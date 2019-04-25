@@ -7,46 +7,47 @@ import zhCN from 'antd/lib/locale-provider/zh_CN';
 // import { ConnectedRouter } from 'react-router-redux';
 //import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-// import Sidebar from '../../component/side/Sidebar';
-//import Header from '../../component/header/Header';
-import Login from '../../component/login/login';
-import Main from '../../component/main/main';
-import MainAntd from '../../component/main/mainAntd';
-import MyCarousel from '../../component/carousel/carousel';
-import Carousel1 from '../../component/carousel/carousel1';
-import MyCollapse from '../../component/collapse/collapse';
-import MyList from '../../component/list/list';
+// import Sidebar from '../../layouts/side/Sidebar';
+//import Header from '../../layouts/header/Header';
+import Login from '../../views/login/login';
+import Main from '../../layouts/main/main';
+import MainAntd from '../../layouts/main/mainAntd';
+import MyCarousel from '../../views/antd/carousel/carousel';
+import Carousel1 from '../../views/antd/carousel/carousel1';
+import MyCollapse from '../../views/antd/collapse/collapse';
+import MyList from '../../views/antd/list/list';
  
-import Home from '../../component/main/home';
-import Form from '../../component/form/form/Form';
-import FormZ from '../../component/form/form/FormZ';
-import FormConfig from '../../component/form/formConfig';
-import Table1 from '../../component/table/table1';
-import Table2 from '../../component/table/table2';
-import Table3 from '../../component/table/table3';
-import Table4 from '../../component/table/table4';
-import Table5 from '../../component/table/table5';
-import Table6 from '../../component/table/table6';
-import Table7 from '../../component/table/table7';
-import Table8 from '../../component/table/table8';
-import Table9 from '../../component/table/table9';
-import Table10 from '../../component/table/table10';
-import Table11 from '../../component/table/table11';
-import Table12 from '../../component/table/table12';
-import Table13 from '../../component/table/table13';
-import Table14 from '../../component/table/table14';
-import Table15 from '../../component/table/table15';
-import Table16 from '../../component/table/table16';
-import Table17 from '../../component/table/table17';
-import Table18 from '../../component/table/table18';
-import Table19 from '../../component/table/table19';
-import Table20 from '../../component/table/table20';
-import Table21 from '../../component/table/table21';
-import Table22 from '../../component/table/table22';
-import Table23 from '../../component/table/table23';
-import Table24 from '../../component/table/table24';
-import NotFound from '../../component/404/notfound';
+import Home from '../../layouts/main/home';
+import Form from '../../views/antd/form/form/Form';
+import FormZ from '../../views/antd/form/form/FormZ';
+import FormConfig from '../../views/antd/form/formConfig';
+import Table1 from '../../views/antd/table/table1';
+import Table2 from '../../views/antd/table/table2';
+import Table3 from '../../views/antd/table/table3';
+import Table4 from '../../views/antd/table/table4';
+import Table5 from '../../views/antd/table/table5';
+import Table6 from '../../views/antd/table/table6';
+import Table7 from '../../views/antd/table/table7';
+import Table8 from '../../views/antd/table/table8';
+import Table9 from '../../views/antd/table/table9';
+import Table10 from '../../views/antd/table/table10';
+import Table11 from '../../views/antd/table/table11';
+import Table12 from '../../views/antd/table/table12';
+import Table13 from '../../views/antd/table/table13';
+import Table14 from '../../views/antd/table/table14';
+import Table15 from '../../views/antd/table/table15';
+import Table16 from '../../views/antd/table/table16';
+import Table17 from '../../views/antd/table/table17';
+import Table18 from '../../views/antd/table/table18';
+import Table19 from '../../views/antd/table/table19';
+import Table20 from '../../views/antd/table/table20';
+import Table21 from '../../views/antd/table/table21';
+import Table22 from '../../views/antd/table/table22';
+import Table23 from '../../views/antd/table/table23';
+import Table24 from '../../views/antd/table/table24';
+import NotFound from '../../views/404/notfound';
 // import FormSubmit from './components/form/FormSubmit';
+import TestMock from '../../views/test/TestMock';
 
 // import './css/index.css';
 // import './assets/css/bootstrap.min.css';
@@ -217,7 +218,14 @@ const RouterConfig = [
     exact:true,
     strict:true,
     component: Table24
-  }
+  }, 
+
+  {
+    path: '/testMock',
+    exact:true,
+    strict:true,
+    component: TestMock
+  }, 
   
 ] 
 
@@ -270,6 +278,7 @@ const RootRouter=({history})=>(
       <Route exact strict path="/table22" render={() =>(configweb() ? (<MainAntd />) : (<Login />))}/>
       <Route exact strict path="/table23" render={() =>(configweb() ? (<MainAntd />) : (<Login />))}/>
       <Route exact strict path="/table24" render={() =>(configweb() ? (<MainAntd />) : (<Login />))}/>
+      <Route exact strict path="/testMock" render={() =>(configweb() ? (<MainAntd />) : (<Login />))}/>
       <Route exact strict path="/404" component={NotFound}/>  
 			<Route component={NotFound}/>
       <Redirect from='/*' to='/404' /> 

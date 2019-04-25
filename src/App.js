@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import RouterConfig from './config/router/RouterConfig';
+// import RouterConfig from './config/router/RouterConfig';
 import logo from './logo.svg';
 import './App.css';
 

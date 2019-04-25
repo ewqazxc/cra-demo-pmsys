@@ -5,8 +5,8 @@ import {BrowserRouter as Router,Route} from 'react-router-dom';
 
 import {RouterConfig} from '../../config/router/RouterConfig'; 
 
-import SideMenuAntd from '../../component/side/sideMenuAntd';
-import MyHeader from '../../component/header/Header';
+import SideMenuAntd from '../side/sideMenuAntd';
+import MyHeader from '../header/Header';
 
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;

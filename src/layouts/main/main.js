@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router'
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
-import Sidebar from '../../component/side/Sidebar';
-import Header from '../../component/header/Header';
-import Login from '../../component/login/login';
+import Sidebar from '../side/Sidebar';
+import Header from '../header/Header';
+import Login from '../../views/login/login';
 import {RouterConfig} from '../../config/router/RouterConfig'; 
 
 class Main extends Component {
